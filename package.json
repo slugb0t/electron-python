@@ -1,25 +1,34 @@
 {
-  "name": "pretty-calculator",
+  "name": "electron-python-example",
   "version": "1.0.0",
-  "description": "A minimal Electron and Python - based calculator ",
+  "description": "electron front end connected to a python backend using zerorpc",
   "main": "main.js",
+  "dependencies": {
+    "electron": "1.7.6",
+    "electron-packager": "^9.0.1"
+  },
+  "devDependencies": {
+    "electron": "1.7.6",
+    "electron-packager": "^9.0.1"
+  },
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/fyears/electron-python-example",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slugb0t/electron-python.git"
+  },
   "keywords": [
     "Electron",
     "Python",
     "zerorpc",
     "demo"
   ],
-  "author": "fyears",
-  "license": "MIT",
-  "dependencies": {
-    "zerorpc": "git+https://github.com/0rpc/zerorpc-node.git"
+  "author": "Dorian Portillo (modified from https://github.com/fyears/electron-python-example ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slugb0t/electron-python/issues"
   },
-  "devDependencies": {
-    "electron": "1.7.6",
-    "electron-packager": "^9.0.1"
-  }
+  "homepage": "https://github.com/slugb0t/electron-python#readme"
 }
+

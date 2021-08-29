@@ -22,8 +22,9 @@ button.addEventListener('click', () => {
       console.error(error)
     } else {
       result.textContent = res
+      console.log(input1.value + " " + input2.value)
     }
   })
 })
 
-input1.dispatchEvent(new Event('input'))
+result.dispatchEvent(new Event('result'))

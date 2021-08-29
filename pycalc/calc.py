@@ -15,15 +15,25 @@ def calc(s):
     j = 0
     result = 0
 
-    while (i < len(s)):
+    while i < len(s):
+        if(s[i] == " "):
+            break
         if(s[i].isdigit()):
-            num = s[i]
-        if( s[i] == " "):
-            inputs.append(float(num))
-            num = ""
+            num += s[i]
         i += 1
-    result = inputs[0] + inputs[1]
-    
+    #store first number    
+    input1 = float(num)
+    num = ""
+    i += 1
+    while i < len(s):
+        if(s[i] == " "):
+            break
+        if(s[i].isdigit()):
+            num += s[i]
+        i += 1
+    input2 = float(num)
+    result = input1 + input2
+
     return result
     
 

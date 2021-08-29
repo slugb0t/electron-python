@@ -6,21 +6,26 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="context">
+    <div class="header">
       <h1 id="title">Hello Calculator!</h1>
-      <p> We are using Node.js <script>document.write(process.versions.node)</script>,
+      <p id="info"> Enter numbers into both input fields and hit solve to get summation of both numbers
+      </p>
+    </div>
+    
+    <div class="context">
+      <input id="formula1"></input>
+      <input id="formula2"></input>
+      <button id="solve" type=button>Sum</button>
+    </div>
+    
+    
+    <div id="result"></div>
+
+    <div class="footer">
+      <p> Running with Node.js <script>document.write(process.versions.node)</script>,
         Chromium <script>document.write(process.versions.chrome)</script>,
         and Electron <script>document.write(process.versions.electron)</script>.</p>
-      <p>Enter formula in either both or one field then hit solve.</p>
-      <p>This calculator supports <code>+-*/^()</code>, 
-        whitespaces, and integers and floating numbers.</p>
-      <p>SOMETHING</p>
     </div>
-
-    <input id="formula1"></input>
-    <input id="formula2"></input>
-    <button id="solve" type=button>Solve</button>
-    <div id="result"></div>
   </body>
 
   <script>

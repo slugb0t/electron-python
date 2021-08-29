@@ -3,15 +3,53 @@
     padding: 0;
 }
 
-.context {
+
+#title {
     display: flex;
-    flex: auto;
-    flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
+
+#info {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.context {
+    display: flex;
+    justify-content: space-around;
+}
+
+#result {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#solve {
+    margin-right: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    padding: 12px 28px
+  }
+  
+  #solve:hover {background-color: #e7e7e7;}
 
 #formula1 {
     margin: auto;
     padding: 10px;
+}
+
+#formula2 {
+    margin: auto;
+    padding: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }

@@ -9,10 +9,8 @@ def calc(s):
     input1 = 0
     input2 = 0
     num = ""
-    inputs = []
     # inputs are read is char and put into array to be made into float
     i = 0
-    j = 0
     result = 0
 
     while i < len(s):

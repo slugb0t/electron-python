@@ -17,7 +17,7 @@ let result = document.querySelector('#result')
 let button = document.querySelector('#solve')
 
 button.addEventListener('click', () => {
-  client.invoke("calc", (input1.value + input2.value), (error, res) => {
+  client.invoke("calc", (input1.value + " " + input2.value), (error, res) => {
     if(error) {
       console.error(error)
     } else {

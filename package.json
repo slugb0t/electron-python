@@ -9,9 +9,12 @@
   },
   "devDependencies": {
     "electron": "1.7.6",
-    "electron-packager": "^9.0.1"
+    "electron-packager": "^9.0.1",
+    "mocha": "^6.2.3",
+    "spectron": "^3.7.3"
   },
   "scripts": {
+    "test": "mocha",
     "start": "electron ."
   },
   "repository": {
@@ -31,4 +34,3 @@
   },
   "homepage": "https://github.com/slugb0t/electron-python#readme"
 }
-

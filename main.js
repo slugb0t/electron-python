@@ -74,6 +74,7 @@ const createWindow = () => {
     protocol: 'file:',
     slashes: true
   }))
+  //modify spec.js if devtools are turned on (detects two windows)
   //mainWindow.webContents.openDevTools()
 
   mainWindow.on('closed', () => {

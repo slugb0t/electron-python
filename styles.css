@@ -14,7 +14,6 @@ body {
     }
 }
 
-
 #title {
     display: flex;
     justify-content: center;
@@ -48,7 +47,9 @@ body {
     padding: 12px 28px
   }
   
-  #solve:hover {background-color: #e7e7e7;}
+  #solve:hover {
+      background-color: #e7e7e7;
+}
 
 #formula1 {
     margin: auto;

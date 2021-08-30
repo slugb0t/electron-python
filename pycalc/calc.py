@@ -17,7 +17,7 @@ def calc(s):
         if(s[i] == " "):
             break
         if(s[i].isalpha()):
-            result = "not a number"
+            result = "input 1 is not a number"
             return result
         if(s[i].isdigit()):
             num += s[i]
@@ -30,7 +30,7 @@ def calc(s):
         if(s[i] == " "):
             break
         if(s[i].isalpha()):
-            result = "not a number"
+            result = "input 2 is not a number"
             return result
         if(s[i].isdigit()):
             num += s[i]

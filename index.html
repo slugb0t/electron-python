@@ -13,19 +13,36 @@
     </div>
     
     <div class="context">
-      <input id="formula1"></input>
-      <input id="formula2"></input>
+      <input id="formula1" ></input>
+      <input id="formula2" ></input>
       <button id="solve" type=button>Sum</button>
     </div>
-    
-    
+
+    </div>
     <div id="result"></div>
+    <div id="serverMessage">Starting server</div>
 
     <div class="footer">
       <p> Running with Node.js <script>document.write(process.versions.node)</script>,
         Chromium <script>document.write(process.versions.chrome)</script>,
         and Electron <script>document.write(process.versions.electron)</script>.</p>
     </div>
+
+    <!-- tried making loading screen
+    <script>
+      // select the target node
+      var target = document.querySelector('#result')
+      // create an observer instance
+      var observer = new MutationObserver(function(mutations) {
+        console.log(target.innerText);
+        target.css("visibility", "hidden");
+      });
+      // configuration of the observer:
+      var config = { attributes: true, childList: true, characterData: true };
+      // pass in the target node, as well as the observer options
+      observer.observe(target, config);
+    </script>
+    -->
   </body>
 
   <script>

@@ -1,12 +1,19 @@
 const zerorpc = require("zerorpc")
-let client = new zerorpc.Client()
+const LargeHeartBeat = 60 * 60 * 24 * 30 * 12; //1 year
+clientOptions = {
+  "heartbeatInterval": LargeHeartBeat,
+}
+let client = new zerorpc.Client(clientOptions)
 
 client.connect("tcp://127.0.0.1:4242")
 
+let message = document.querySelector('#serverMessage');
 client.invoke("echo", "server ready", (error, res) => {
   if(error || res !== 'server ready') {
+    message.textContent = error;
     console.error(error)
   } else {
+    message.textContent = res;
     console.log("server is ready")
   }
 })
@@ -27,4 +34,5 @@ button.addEventListener('click', () => {
   })
 })
 
+message.dispatchEvent(new Event('serverMessage'))
 result.dispatchEvent(new Event('result'))

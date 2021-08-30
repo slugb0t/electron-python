@@ -10,8 +10,8 @@ py -2 -m venv env3
 ```
 
 ## Install dependencies for each virtual environment then exit
-### It's important to deactivate virtual environments before running electron
-run python environments to install dependencies
+### Run python environments to install dependencies
+It's important to deactivate virtual environments before running electron
 
 Dependencies for python2 env
 ```bash

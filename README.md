@@ -27,10 +27,10 @@ source env2/Scripts/activate
 //env2 for macOS/Linux
 source env2/bin/activate
 
- pip install -r pycal/requirements2.txt
+pip install -r pycal/requirements2.txt
 
 //exit virtual env
- deactivate
+deactivate
 ```
 
 Dependencies for python3 env
@@ -47,14 +47,14 @@ deactivate
 ```
 
 ## Ensure you are using the correct Node version with NVM
-We will be using 7.9.0 version of Node
+We will be using 7.9.0 version of Node,
 Windows users download [NVM for Windows](https://github.com/coreybutler/nvm-windows/releases)
 
 macOS install NVM using homebrew
 if node is already installed delete it first
 ```bash
- brew uninstall --ignore-dependencies node 
- brew uninstall --force node
+brew uninstall --ignore-dependencies node 
+brew uninstall --force node
 
 
 //Install NVM and refresh terminals path

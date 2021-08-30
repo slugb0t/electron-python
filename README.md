@@ -1,5 +1,5 @@
-# electron-python
-electron gui communicating with python backend using zerorpc
+# Electron-Python
+Electron GUI communicating with Python backend using zerorpc
 
 ### Create two python environments (one using python2 and other with python3)
 ```bash

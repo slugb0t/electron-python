@@ -9,16 +9,10 @@ py -2 -m virtualenv env2
 py -2 -m venv env3
 ```
 
-run python environments to install dependencies
-```bash
-//for Windows
-source env2/Scripts/activate
-//macOS/Linux
-source env2/bin/activate
-```
-
 ## Install dependencies for each virtual environment then exit
 ### It's important to deactivate virtual environments before running electron
+run python environments to install dependencies
+
 Dependencies for python2 env
 ```bash
 //env2 for Windows

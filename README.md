@@ -2,9 +2,15 @@
 electron gui communicating with python backend using zerorpc
 
 
-create two python environments (one using python2 and other with python3)
+# create two python environments (one using python2 and other with python3)
+```javascript
+//for python2 environment
+py -2 -m virtualenv env2
+//for python3 environment
+py -2 -m venv env3
+```
 
-# run python2 environment
+# run python environments to install dependencies
 ```javascript
 //for Windows
 $ source env2.7/Scripts/activate
@@ -15,13 +21,13 @@ $ source env2.7/bin/activate
 # install dependencies for each virtual environment
 ```javascript
 //dependencies for python2 env
-$ pip install -r requirements2.txt
+$ pip install -r pycal/requirements2.txt
 //dependencies for python3 env
-$ pip install -r requirements3.txt
+$ pip install -r pycalc/requirements3.txt
 ```
 
 # ensure you are using the correct Node version with NVM
-we will be using 6.17.1 version of Node
+we will be using 7.9.0 version of Node
 on macOS install NVM using homebrew
 if node is already installed delete it first
 ```javascript
@@ -41,21 +47,21 @@ $ source ~/.nvm/nvm.sh
 NVM should now be installed
 ```javascript
 //to check if it is installed
-nvm --version
+$ nvm --version
 ```
 
-we will be using v6.17.1 of Node for this project
+we will be using v7.9.0 of Node for this project
 ```javascript
 //to see list of Node versions you have installed 
-nvm list
-nvm install 6.17.1
+$ nvm install 7.9.0
+$ nvm list
 // change node version
-nvm use 6.17.1
+$ nvm use 7.9.0
 ```
 
 now install node_modules
 ```javascript
-npm install
+$ npm install
 ```
 
 # CLEAN THE CACHES
@@ -68,13 +74,13 @@ $ rm -rf ./node_modules
 
 # On Window PowerShell
 ```powershell
-Remove-Item "$($env:USERPROFILE)\.node-gyp" -Force -Recurse -ErrorAction Ignore
-Remove-Item "$($env:USERPROFILE)\.electron-gyp" -Force -Recurse -ErrorAction Ignore
-Remove-Item .\node_modules -Force -Recurse -ErrorAction Ignore
+$ Remove-Item "$($env:USERPROFILE)\.node-gyp" -Force -Recurse -ErrorAction Ignore
+$ Remove-Item "$($env:USERPROFILE)\.electron-gyp" -Force -Recurse -ErrorAction Ignore
+$ Remove-Item .\node_modules -Force -Recurse -ErrorAction Ignore
 ```
 
 electron application will run now
 ```javascript
-./node_modules/.bin/electron .
+$ ./node_modules/.bin/electron .
 ```
 

@@ -16,6 +16,9 @@ def calc(s):
     while i < len(s):
         if(s[i] == " "):
             break
+        if(s[i].isalpha()):
+            result = "not a number"
+            return result
         if(s[i].isdigit()):
             num += s[i]
         i += 1
@@ -26,6 +29,9 @@ def calc(s):
     while i < len(s):
         if(s[i] == " "):
             break
+        if(s[i].isalpha()):
+            result = "not a number"
+            return result
         if(s[i].isdigit()):
             num += s[i]
         i += 1

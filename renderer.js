@@ -14,7 +14,7 @@ client.invoke("echo", "server ready", (error, res) => {
     console.error(error)
   } else {
     message.textContent = res;
-    console.log("server is ready")
+    console.log("Server is ready")
   }
 })
 
@@ -26,15 +26,13 @@ let errormessage = "input is blank";
 
 
 button.addEventListener('click', () => {
+  //error check for empty input
   if(input1.value === "" || input2.value === "")
     {
       result.textContent = errormessage;
       return;
     }
-  client.invoke("calc", (input1.value + " " + input2.value), (error, res) => {
-    //if inputs are blank
-    
-    
+  client.invoke("calc", (input1.value + " " + input2.value), (error, res) => {  
     if(error) {
       console.error(error)
     } else {

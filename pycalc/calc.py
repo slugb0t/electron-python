@@ -22,7 +22,7 @@ def calc(s):
         if(s[i].isdigit()):
             num += s[i]
         i += 1
-    #store first number    
+    # store first number    
     input1 = float(num)
     num = ""
     i += 1
@@ -35,6 +35,7 @@ def calc(s):
         if(s[i].isdigit()):
             num += s[i]
         i += 1
+    # store second number
     input2 = float(num)
     result = input1 + input2
 

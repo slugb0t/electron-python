@@ -22,16 +22,28 @@ let input1 = document.querySelector('#formula1');
 let input2 = document.querySelector('#formula2')
 let result = document.querySelector('#result')
 let button = document.querySelector('#solve')
+let errormessage = "input is blank";
+
 
 button.addEventListener('click', () => {
+  if(input1.value === "" || input2.value === "")
+    {
+      result.textContent = errormessage;
+      return;
+    }
   client.invoke("calc", (input1.value + " " + input2.value), (error, res) => {
+    //if inputs are blank
+    
+    
     if(error) {
       console.error(error)
     } else {
       result.textContent = res
       console.log(input1.value + " " + input2.value)
     }
-  })
+    input1 = document.querySelector('#formula1');
+    input2 = document.querySelector('#formula2')
+  });
 })
 
 message.dispatchEvent(new Event('serverMessage'))

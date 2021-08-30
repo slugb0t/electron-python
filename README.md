@@ -63,12 +63,14 @@ $ nvm list
 $ nvm use 7.9.0
 ```
 
-now install node_modules
-```bash
-$ npm install
+Clear caches
+On Window PowerShell
+```powershell
+$ Remove-Item "$($env:USERPROFILE)\.node-gyp" -Force -Recurse -ErrorAction Ignore
+$ Remove-Item "$($env:USERPROFILE)\.electron-gyp" -Force -Recurse -ErrorAction Ignore
+$ Remove-Item .\node_modules -Force -Recurse -ErrorAction Ignore
 ```
 
-## CLEAN THE CACHES
 On Linux / OS X
 ```bash
 $ rm -rf ~/.node-gyp
@@ -76,11 +78,9 @@ $ rm -rf ~/.electron-gyp
 $ rm -rf ./node_modules
 ```
 
-On Window PowerShell
-```powershell
-$ Remove-Item "$($env:USERPROFILE)\.node-gyp" -Force -Recurse -ErrorAction Ignore
-$ Remove-Item "$($env:USERPROFILE)\.electron-gyp" -Force -Recurse -ErrorAction Ignore
-$ Remove-Item .\node_modules -Force -Recurse -ErrorAction Ignore
+now install node_modules
+```bash
+$ npm install
 ```
 
 ### Electron application will run now

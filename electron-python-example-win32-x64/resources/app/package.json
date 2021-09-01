@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "start": "./node_modules/.bin/electron ."
+    "start": "./node_modules/.bin/electron .",
+    "build": "./node_modules/.bin/electron-packager . --overwrite --ignore='pycalc$' --ignore='env2.7$' --ignore='old-post-backup' --ignore='env3$' --arch=x64 --asar"
   },
   "repository": {
     "type": "git",

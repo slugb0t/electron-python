@@ -1,31 +1,15 @@
 # Electron-Python
 Electron GUI communicating with Python backend using zerorpc
 
-### Create two python environments (one using python2 and other with python3)
+### Create a python environments (with python3)
 ```bash
-//for python2 environment
-py -2 -m virtualenv env2
 //for python3 environment
-py -2 -m venv env3
+python -m venv env3
 ```
 
 ## Install dependencies for each virtual environment then exit
 ### Run python environments to install dependencies
 It's important to deactivate virtual environments before running electron
-
-Dependencies for python2 env
-```bash
-//env2 for Windows
-source env2/Scripts/activate
-
-//env2 for macOS/Linux
-source env2/bin/activate
-
-pip install -r pycal/requirements2.txt
-
-//exit virtual env
-deactivate
-```
 
 Dependencies for python3 env
 ```bash
@@ -36,8 +20,6 @@ source env3/bin/activate
 
 pip install -r pycalc/requirements3.txt
 
-//exit virtual env
-deactivate
 ```
 
 ## Ensure you are using the correct Node version with NVM
@@ -94,15 +76,26 @@ rm -rf ./node_modules
 
 Install node_modules
 ```bash
-npm install
+npm install --runtime=electron --target=1.7.6
+```
+
+Set the environment variables
+```bash
+export npm_config_target=1.7.6 # electron version
+export npm_config_runtime=electron
+export npm_config_disturl=https://atom.io/download/electron
+export npm_config_build_from_source=true
+
+npm config ls
 ```
 
 ### Electron application will run now
 ```bash
 ./node_modules/.bin/electron .
+//if dynamic linking error shows, clean caches and install node_modules again
 ```
 
 ### To run automated testing run:
 ```bash
-npm run
+npm test
 ```

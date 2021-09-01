@@ -10,7 +10,7 @@ class CalcApi(object):
         try:
             return real_calc(text)
         except Exception as e:
-            return 0.0    
+            return 0.0   
     def echo(self, text):
         """echo any text"""
         return text

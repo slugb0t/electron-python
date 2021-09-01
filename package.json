@@ -5,13 +5,12 @@
   "main": "main.js",
   "dependencies": {
     "electron": "1.7.6",
-    "electron-packager": "8.7.2",
-    "zerorpc": "0.6.0"
+    "electron-packager": "^9.0.1",
+    "zerorpc": "git+https://github.com/0rpc/zerorpc-node.git"
   },
   "devDependencies": {
     "electron": "1.7.6",
-    "electron-packager": "8.7.2",
-    "jquery": "^3.6.0",
+    "electron-packager": "^9.0.1",
     "mocha": "^6.2.3",
     "spectron": "^3.7.3"
   },

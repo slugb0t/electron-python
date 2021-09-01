@@ -1,7 +1,3 @@
-"""
-A calculator based on https://en.wikipedia.org/wiki/Reverse_Polish_notation
-"""
-
 from __future__ import print_function
 
 

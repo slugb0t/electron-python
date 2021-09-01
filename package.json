@@ -4,19 +4,19 @@
   "description": "electron front end connected to a python backend using zerorpc",
   "main": "main.js",
   "dependencies": {
-    "electron": "1.7.6",
-    "electron-packager": "^9.0.1"
+    "zerorpc": "0.6.3"
   },
   "devDependencies": {
     "electron": "1.7.6",
-    "electron-packager": "^9.0.1",
+    "electron-packager": "8.7.2",
     "jquery": "^3.6.0",
     "mocha": "^6.2.3",
     "spectron": "^3.7.3"
   },
   "scripts": {
     "test": "mocha",
-    "start": "./node_modules/.bin/electron ."
+    "start": "./node_modules/.bin/electron .",
+    "build": "./node_modules/.bin/electron-packager . --overwrite --ignore='pycalc$' --ignore='env2.7$' --ignore='old-post-backup' --ignore='env3$' --arch=x64 --asar"
   },
   "repository": {
     "type": "git",

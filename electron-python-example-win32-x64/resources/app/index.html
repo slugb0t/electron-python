@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello Calculator!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1 id="title">Hello Calculator!</h1>
+      <p id="info"> Enter numbers into both input fields and hit solve to get summation of both numbers
+      </p>
+    </div>
+    
+    <div class="context">
+      <input id="formula1" ></input>
+      <input id="formula2" ></input>
+      <button id="solve" type=button>Sum</button>
+    </div>
+
+    </div>
+    <div id="result"></div>
+    <div id="serverMessage">Starting server please wait..</div>
+
+    <div class="footer">
+      <p> Running with Node.js <script>document.write(process.versions.node)</script>,
+        Chromium <script>document.write(process.versions.chrome)</script>,
+        and Electron <script>document.write(process.versions.electron)</script>.</p>
+    </div>
+
+    <!-- tried making loading screen
+    <script>
+      // select the target node
+      var target = document.querySelector('#result')
+      // create an observer instance
+      var observer = new MutationObserver(function(mutations) {
+        console.log(target.innerText);
+        target.css("visibility", "hidden");
+      });
+      // configuration of the observer:
+      var config = { attributes: true, childList: true, characterData: true };
+      // pass in the target node, as well as the observer options
+      observer.observe(target, config);
+    </script>
+    -->
+  </body>
+
+  <script>
+    require('./renderer.js')
+  </script>
+</html>

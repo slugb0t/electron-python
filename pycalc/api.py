@@ -3,6 +3,7 @@ from calc import calc as real_calc
 import sys
 import zerorpc
 
+
 class CalcApi(object):
     def calc(self, text):
         """based on the input text, return the int result"""

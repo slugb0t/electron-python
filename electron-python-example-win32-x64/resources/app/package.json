@@ -1,0 +1,36 @@
+{
+  "name": "electron-python-example",
+  "version": "1.0.0",
+  "description": "electron front end connected to a python backend using zerorpc",
+  "main": "main.js",
+  "dependencies": {
+    "zerorpc": "0.6.3"
+  },
+  "devDependencies": {
+    "electron": "1.7.6",
+    "electron-packager": "8.7.2",
+    "jquery": "^3.6.0",
+    "mocha": "^6.2.3",
+    "spectron": "^3.7.3"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "./node_modules/.bin/electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slugb0t/electron-python.git"
+  },
+  "keywords": [
+    "Electron",
+    "Python",
+    "zerorpc",
+    "demo"
+  ],
+  "author": "Dorian Portillo (modified from https://github.com/fyears/electron-python-example ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slugb0t/electron-python/issues"
+  },
+  "homepage": "https://github.com/slugb0t/electron-python#readme"
+}

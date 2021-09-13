@@ -5,7 +5,7 @@ def calc(s):
     input1 = 0
     input2 = 0
     num = ""
-    # inputs are read is char and put into array to be made into float
+    # inputs are read is char and put into STRING to be made into float
     i = 0
     result = 0
 

@@ -19,7 +19,6 @@ source env3/Scripts/activate
 source env3/bin/activate
 
 pip install -r pycalc/requirements3.txt
-
 ```
 
 ## Ensure you are using the correct Node version with NVM

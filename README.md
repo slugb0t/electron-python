@@ -1,4 +1,5 @@
 # Electron-Python
+![app](./app.PNG)
 Electron GUI communicating with Python backend using zerorpc
 
 ### Create a python environments (with python3)
